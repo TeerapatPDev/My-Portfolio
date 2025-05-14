@@ -1,90 +1,89 @@
-  /* ตั้งค่าทั่วไป */
-  :root {
-      --primary-color: #4a6fa5;
-      --accent-color: #ff6b6b;
-      --light-color: #f9f9f9;
-      --dark-color: #333;
-      --transition: all 0.3s ease;
-  }
+/* ตั้งค่าทั่วไป */
+:root {
+    --primary-color: #4a6fa5;
+    --accent-color: #ff6b6b;
+    --light-color: #f9f9f9;
+    --dark-color: #333;
+    --transition: all 0.3s ease;
+}
 
-  * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  body {
-      font-family: 'Prompt', 'Kanit', sans-serif;
-      line-height: 1.6;
-      color: var(--dark-color);
-      background-color: #f5f5f5;
-  }
+body {
+    font-family: 'Prompt', 'Kanit', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #f5f5f5;
+}
 
-  a {
-      text-decoration: none;
-      color: var(--primary-color);
-      transition: var(--transition);
-  }
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
 
-  a:hover {
-      color: var(--accent-color);
-  }
+a:hover {
+    color: var(--accent-color);
+}
 
-  /* เฮดเดอร์ */
-  header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
+/* เฮดเดอร์ */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-  }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
 
-  nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-  .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      transition: color 0.3s ease, transform 0.3s ease;
-  }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
 
-  .logo:hover {
-      color: rgb(156, 156, 156);
-      transform: scale(1.1);
-  }
+.logo:hover {
+    color: #ccc;
+    transform: scale(1.05);
+}
 
+.nav-links {
+    display: flex;
+    list-style: none;
+}
 
-  .nav-links {
-      display: flex;
-      list-style: none;
-  }
+.nav-links li {
+    margin-left: 2rem;
+}
 
-  .nav-links li {
-      margin-left: 2rem;
-  }
+.nav-links a {
+    color: white;
+}
 
-  .nav-links a {
-      color: white;
-  }
+.nav-links a:hover {
+    color: var(--accent-color);
+}
 
-  .nav-links a:hover {
-      color: var(--accent-color);
-  }
-
-  /* หน้าโฮม */
-  .hero {
+/* หน้าโฮม */
+.hero {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -94,223 +93,246 @@
     color: white;
     text-align: center;
     padding-top: 80px;
-  }
-  
-  @keyframes floatGradient {
-    0% {background-position: 50% 0%;}
-    50% {background-position: 50% 100%;}
-    100% {background-position: 50% 0%;}
-  }
-  
+}
 
-  .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-  }
+@keyframes floatGradient {
+    0% {
+        background-position: 50% 0%;
+    }
 
-  .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-  }
+    50% {
+        background-position: 50% 100%;
+    }
 
-  .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-  }
+    100% {
+        background-position: 50% 0%;
+    }
+}
 
-  .btn {
-      display: inline-block;
-      background: var(--primary-color);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: var(--transition);
-  }
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-  .btn:hover {
-      background: var(--accent-color);
-      transform: translateY(-3px);
-  }
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
-  /* เกี่ยวกับฉัน */
-  section {
-      padding: 5rem 0;
-  }
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
 
-  .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2.5rem;
-  }
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+}
 
-  .about-content {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      align-items: center;
-  }
+.btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
 
-  .about-img img {
-      width: 100%;
-      transform: translate(-10px, -10px);
-  }
+/* เกี่ยวกับฉัน */
+section {
+    padding: 5rem 0;
+}
 
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
 
-  .about-text h3 {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-  }
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
 
-  .skills {
-      padding: 20px;
-  }
+.about-img img {
+    width: 100%;
+    transform: translate(-10px, -10px);
+}
 
-  .skill-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-  }
+.about-text h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
 
-  .skill-card {
-      background: #ffffff;
-      padding: 16px;
-      border-radius: 12px;
-      flex: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
+/* ทักษะ */
+.skills {
+    padding: 2rem;
+}
 
-  .skill-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      background-color: #dddddd;
-  }
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-  .skill-card h4 {
-      margin-bottom: 8px;
-  }
+.skill-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    flex: 1 1 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
 
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #eeeeee;
+}
 
-  /* ผลงาน */
-  .portfolio {
-      background-color: var(--light-color);
-  }
+.skill-card h4 {
+    margin-bottom: 8px;
+}
 
-  .portfolio-items {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 2rem;
-  }
+/* ผลงาน */
+.portfolio {
+    background-color: var(--light-color);
+}
 
-  .portfolio-item {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: var(--transition);
-  }
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
 
-  .portfolio-item:hover {
-      transform: translateY(-10px);
-  }
+.portfolio-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
 
-  .portfolio-img {
-      height: 200px;
-      overflow: hidden;
-  }
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
 
-  .portfolio-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: var(--transition);
-  }
+.portfolio-img {
+    height: 200px;
+    overflow: hidden;
+}
 
-  .portfolio-item:hover .portfolio-img img {
-      transform: scale(1.1);
-  }
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
 
-  .portfolio-info {
-      padding: 1.5rem;
-  }
+.portfolio-item:hover .portfolio-img img {
+    transform: scale(1.1);
+}
 
-  .portfolio-info h3 {
-      margin-bottom: 0.5rem;
-  }
+.portfolio-info {
+    padding: 1.5rem;
+}
 
-  .portfolio-info p {
-      margin-bottom: 1rem;
-      color: #666;
-  }
+.portfolio-info h3 {
+    margin-bottom: 0.5rem;
+}
 
-  /* การติดต่อ */
-  .contact {
-      background-color: white;
-  }
+.portfolio-info p {
+    color: #666;
+}
 
-  .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-  }
+/* การติดต่อ */
+.contact {
+    background-color: white;
+}
 
-  .form-group {
-      margin-bottom: 1.5rem;
-  }
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-  .form-control {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1rem;
-  }
+.form-group {
+    margin-bottom: 1.5rem;
+}
 
-  textarea.form-control {
-      height: 150px;
-      resize: vertical;
-  }
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
-  /* ฟุตเตอร์ */
-  footer {
-      background-color: var(--dark-color);
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-  }
+textarea.form-control {
+    height: 150px;
+    resize: vertical;
+}
 
-  .social-links {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1rem;
-      list-style: none;
-  }
+/* ฟุตเตอร์ */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
 
-  .social-links li {
-      margin: 0 1rem;
-  }
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    list-style: none;
+}
 
-  .social-links a {
-      color: white;
-      font-size: 1.5rem;
-  }
+.social-links li {
+    margin: 0 1rem;
+}
 
-  .social-links a:hover {
-      color: var(--accent-color);
-  }
+.social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
 
-  /* Responsive */
-  @media (max-width: 768px) {
-      .about-content {
-          grid-template-columns: 1fr;
-      }
+.social-links a:hover {
+    color: var(--accent-color);
+}
 
-      .hero h1 {
-          font-size: 2.5rem;
-      }
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-      .section-title {
-          font-size: 2rem;
-      }
-  }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        background: var(--primary-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+        /* จะทำเมนู toggle ภายหลังได้ */
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+    }
+}
